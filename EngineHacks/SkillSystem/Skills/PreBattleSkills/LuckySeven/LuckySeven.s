@@ -4,10 +4,10 @@
 push {r4, lr}
 mov	r4, r0 @attacker
 
-@check if turn is bigger than seven
+@check if turn is bigger than three
 ldr	r0,=#0x202BCF0
 ldrh	r0, [r0,#0x10]
-cmp	r0, #0x07
+cmp	r0, #0x03
 bhi	End
 
 @has skill
@@ -19,15 +19,10 @@ ldr	r1, LuckySevenID
 cmp	r0, #0
 beq	End
 
-@add 20 to hit and avoid
-mov	r0, #0x60
-ldrh	r1, [r4,r0]	@load hit
-add	r1, #0x14	@add 20 to hit
-strh	r1, [r4,r0]     @store
-
-mov	r0, #0x62
-ldrh	r1, [r4,r0]	@load avoid
-add	r1, #0x14	@add 20 to avoid
+@add 2 to move
+mov	r0, #0x1D
+ldrh	r1, [r4,r0]	@load move
+add	r1, #0x02	@add 2 to move
 strh	r1, [r4,r0]     @store
 
 End:
