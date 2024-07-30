@@ -58,7 +58,12 @@ strh r0, [r4,r1]
 
 mov r1, #0x60 @Hit
 ldrh r0, [r4, r1]
-add r0, #10
+add r0, #15
+strh r0, [r4,r1]
+
+mov r1, #0x62 @Avoid
+ldrh r0, [r4, r1]
+add r0, #15
 strh r0, [r4,r1]
 
 End:
