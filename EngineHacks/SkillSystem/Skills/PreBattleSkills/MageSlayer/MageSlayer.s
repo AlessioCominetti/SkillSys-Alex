@@ -36,7 +36,7 @@ strh r0, [r4,r1]
 
 mov r1, #0x66
 ldrh r0, [r4, r1] @Crit
-add r0, #10
+add r0, #100
 strh r0, [r4,r1]
 
 End:
