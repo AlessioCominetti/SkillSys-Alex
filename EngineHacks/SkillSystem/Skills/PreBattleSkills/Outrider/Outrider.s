@@ -41,7 +41,7 @@ strh r0, [r4,r1]
 
 mov r1, #0x66 @crit
 ldrh r0, [r4, r1]
-mov r3,#0x3
+mov r3,#0x5
 mul r3,r2
 add r0, r3
 strh r0, [r4,r1]
