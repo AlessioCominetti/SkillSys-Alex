@@ -26,6 +26,12 @@ ldrh r0, [r4, r1] @AS
 add r0, #3
 strh r0, [r4,r1]
 
+@add 1 MOV
+mov r1, #0x1D
+ldrh r0, [r4, r1] @MOV
+add r0, #1
+strh r0, [r4,r1]
+
 End:
 pop {r4-r7, r15}
 .align
