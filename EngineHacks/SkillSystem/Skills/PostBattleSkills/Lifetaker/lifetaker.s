@@ -51,12 +51,26 @@ pop	{r1}
 cmp	r1, r2		@check if hp is already max
 beq	End
 
-@apply status in allies in three range
+@give Thor's Ire status to allies in 3 tiles for one turn
+mov    r0, r4 @attacker
+mov    r2, #0 @can trade
+mov    r3, #3 @range
+.short 0xf800
+cmp r0, #0
+beq Done
+
+@add status
+mov   r0,r4
+add   r0,#0x30    @get this unit status
+ldrh  r3,[r0]     @load this unit status into r3
+add   r3,#0x71    @first byte contains duration, second one is Thor's Ire status
 
 
 @this used to just add curHP to curHP and set that as new curHP
 @make r0 = 1/4 maxHP
-lsr r0,r1,#2 @maxHP/4
+
+Done:
+lsr r0,r1,#1 @maxHP/2
 
 add	r2, r0		@total healing
 cmp	r2, r1		@is the new hp higher than max?
