@@ -20,19 +20,34 @@ mov	r0, r4
 ldr	r1, EvenRhythmID
 .short	0xf800
 cmp	r0, #0
-beq	End
+beq	Other
 
 @add 10 to hit and avoid
 mov	r0, #0x60
 ldrh	r1, [r4,r0]	@load hit
-add	r1, #0x0A	@add 20 to hit
+add	r1, #0x0A	@add 10 to hit
 strh	r1, [r4,r0]     @store
 
 mov	r0, #0x62
 ldrh	r1, [r4,r0]	@load avoid
-add	r1, #0x0A	@add 20 to avoid
+add	r1, #0x0A	@add 10 to avoid
 strh	r1, [r4,r0]     @store
 
+beq     End
+
+@add 10 to crit and crit avoid
+mov	r0, #0x66
+ldrh	r1, [r4,r0]	@load crit
+add	r1, #0x0A	@add 10 to crit
+strh	r1, [r4,r0]     @store
+
+mov	r0, #0x68
+ldrh	r1, [r4,r0]	@load crit avoid
+add	r1, #0x0A	@add 10 to crit avoid
+strh	r1, [r4,r0]     @store
+
+
+Other:
 End:
 pop	{r4, r15}
 .align
