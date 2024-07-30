@@ -140,15 +140,13 @@ ldrb r1, [r0, #0x12] @maxhp
 ldrb r0, [r0, #0x13] @currhp
 cmp r0, r1
 bne SkillReturn
-ldr     r0,=0x203A4EC       @Move attacker data into r0.
-add     r0,#0x5a    @Move to the attacker's dmg.
-ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#2    @Add 2 to the attacker's dmg.
-strh    r3,[r0]     @Store attacker dmg.
-add     r0,#2    @Move to the attacker's def.
-ldrh    r3,[r0]     @Load the attacker's def into r3.
-add     r3,#2    @Add 2 to the attacker's def.
-strh    r3,[r0]     @Store attacker def.
+@allows unit to double attack
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
 b       SkillReturn
 
 PragmaticSkill:
@@ -175,6 +173,47 @@ ldrh    r3,[r0]     @Load the attacker's attack into r3.
 add     r3,#0x6    @Add 6 to the attacker's attack.
 strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn	@Attacker's attack. Redundancy? Nah.
+
+DextrousBlowSkill:
+ldr     r0,=0x203A4EC       @Move attacker data into r0.
+ldrh    r3,[r0]     @Load the attacker's dmg into r3.
+add     r0,#0x15    @move to attacker's skl 
+ldr     r6,[r0]     @load the attacker's skl into r6
+lsr     r6,r6,#2    @divide skl by 4
+add     r3,r6       @Add a quarter of unit skl to damage
+add     r0,#0x45    @return to attacker's dmg
+strh    r3,[r0]     @Store attacker dmg.
+b       SkillReturn
+
+VengefulBlowSkill:    @add missing unit hp to hit and crit
+ldr     r4,=0x203A4EC       @Move attacker data into r0.
+ldrb    r0,[r4,#0x12] @attacker max hp
+ldrb    r1,[r4,#0x13] @attacker current hp
+sub     r0,r1         @remaining hp
+ldrh    r1,[r4,r2]
+add     r1,r0,r1
+strh    r1,[r4,r2]
+mov     r6,r0         @store remainig hp value
+add     r4,#0x60    @Move to the attacker's hit.
+ldrh    r3,[r4]     @Load the attacker's hit into r3.
+add     r3,r6       @Add r6 to the attacker's hit.
+strh    r3,[r4]     @Store attacker hit.
+add     r4,#0x66    @Move to the attacker's crit.
+ldrh    r3,[r4]     @Load the attacker's crit into r3.
+add     r3,r6       @Add r6 to the attacker's crit.
+strh    r3,[r4]     @Store attacker crit.
+b       SkillReturn
+
+ChannelingSkill:
+ldr     r0,=0x203A4EC       @Move attacker data into r0.
+add     r5,r0,#0x02        @move here charater status
+cmp     r5,#0x0C     @check if unit didn't move
+beq Skillreturn
+add     r0,#0x66    @Move to the attacker's crit.
+ldrh    r3,[r0]     @Load the attacker's crit into r3.
+add     r3,#0x64    @Add 100 to the attacker's crit.
+strh    r3,[r0]     @Store attacker crit.
+b       SkillReturn
 
 .align
 .ltorg
