@@ -38,18 +38,18 @@ add  r2, #0x1
 b Loop
 
 CheckCount:
-cmp r2,#0x2
+cmp r2,#0x3       @activates if there are three or more enemies
 blt Done
 
 Next:
 mov r0, #0x5A
 ldrh r3, [r4,r0]
-add r3, #3
+add r3, #4
 strh r3, [r4,r0]
 
-mov r0, #0x60
+mov r0, #0x5C
 ldrh r3, [r4,r0]
-add r3, #15
+add r3, #4
 strh r3, [r4,r0]
 
 
