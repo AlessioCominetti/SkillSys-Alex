@@ -65,9 +65,16 @@ swi 8 @sqrt
 mov r2,r0 @for consistency in finishing
 
 FinishCharge:
-*/
-lsr r2,#0x1
+*/ @add damage
+lsr r2,#0x2
 mov r1, #0x5A
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+@add defense
+lsr r2,#0x2
+mov r1, #0x5c
 ldrh r0, [r4, r1]
 add r0, r2
 strh r0, [r4,r1]
