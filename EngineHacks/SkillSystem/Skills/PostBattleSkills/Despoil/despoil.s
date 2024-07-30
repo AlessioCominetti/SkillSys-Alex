@@ -48,17 +48,17 @@ mov	lr, r3
 cmp	r0, #0x00
 beq	End
 
-@killed enemy, roll luck
-ldr	r0,=#0x8019298	@luck getter
-mov	lr, r0
-mov	r0, r4		@attacker
-.short	0xF800
-ldr	r2,=#0x802a52c	@1rn routine
-mov	r1, r4		@attacker
-mov	lr, r2
-.short	0xF800
-cmp	r0, #0x01
-bne	End
+@killed enemy, roll luck,  (I removed the roll)
+@ldr	r0,=#0x8019298	@luck getter
+@mov	lr, r0
+@mov	r0, r4		@attacker
+@.short	0xF800
+@ldr	r2,=#0x802a52c	@1rn routine
+@mov	r1, r4		@attacker
+@mov	lr, r2
+@.short	0xF800
+@cmp	r0, #0x01
+@bne	End
 
 @successful roll, give item/money
 Event:
