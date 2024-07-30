@@ -29,6 +29,11 @@ mov r1, #0x62
 ldrh r0, [r4, r1] @avoid
 add r0, #15
 strh r0, [r4,r1]
+@add 3 to attack speed
+mov r1, #0x5E
+ldrh r0, [r4, r1] @attack speed
+add r0, #3
+strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}
