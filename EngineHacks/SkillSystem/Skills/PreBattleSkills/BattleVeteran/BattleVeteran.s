@@ -42,7 +42,7 @@ Eff:
 
 mov r0, #0x5A
 ldrh r2, [r4, r0] @Damage
-mov r3,#0x1
+mov r3,#0x3
 mul r3,r1 @1 Damage per level
 add r2,r3
 strh r2, [r4,r0]
