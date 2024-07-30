@@ -15,7 +15,7 @@ mov lr, r0
 mov r0, r4 @attacker
 ldr r1, InspirationID
 mov r2, #0 @can_trade
-mov r3, #2 @range
+mov r3, #3 @range
 .short 0xf800
 cmp r0, #0
 beq Done
@@ -23,7 +23,7 @@ beq Done
 @ mov r0, r5
 @ add     r0,#0x5A    @Move to the defender's damage.
 @ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#2    @Subtract 2 from the defender's damage.
+@ sub     r3,#3    @Subtract 3 from the defender's damage.
 @ strh    r3,[r0]     @Store defender dmg.
 
 @testing
@@ -36,7 +36,7 @@ strh r3, [r0]
 mov r0, r4
 add     r0,#0x5A    @Move to the attacker's damage.
 ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2    @add 2 damage.
+add     r3,#3    @add 3 damage.
 strh    r3,[r0]     @Store dmg.
 
 Done:
