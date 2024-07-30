@@ -29,10 +29,11 @@ beq End
 ldrb  r0,[r5,#0x12] @defender max hp
 ldrb  r1,[r5,#0x13] @defender current hp
 sub   r0,r1
+lsr   r0, #2        @divide hp by 4
 mov   r2,#0x5A
-ldrh  r1,[r4,r2]
-add   r1,r0,r1
-strh  r1,[r4,r2]
+ldrh  r1,[r4,r2]    @take attacker damage
+add   r1,r0,r1      @add damage equal to defender missing hp divided by 4
+strh  r1,[r4,r2]    @store damage
 
 @foe under 50% hp?
 ldrb r0, [r5, #0x12]
@@ -44,13 +45,13 @@ bgt End
 @add hit
 mov r1, #0x60
 ldrh r0, [r4, r1] @hit
-add r0, #80
+add r0, #100
 strh r0, [r4,r1]
 
 @add crit
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit
-add r0, #80
+add r0, #100
 strh r0, [r4,r1]
 
 End:
