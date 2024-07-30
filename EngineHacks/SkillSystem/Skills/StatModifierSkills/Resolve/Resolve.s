@@ -30,10 +30,10 @@ ldr r1, ResolveID
 cmp r0, #0
 beq GoBack
 
-mov r1,#3
+mov r1,#5
 mov r0,r4
-mul r0,r1 @multiply stat by 3
-lsr r0,#1 @divide stat by 2 (1.5x total)
+mul r0,r1 @multiply stat by 5
+lsr r0,#2 @divide stat by 4 (1.25x total)
 mov r4,r0 @put back the stat
 
 
