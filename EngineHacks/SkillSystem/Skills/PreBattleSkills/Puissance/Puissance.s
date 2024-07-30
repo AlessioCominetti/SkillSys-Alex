@@ -1,8 +1,6 @@
 .thumb
 .equ PuissanceID, SkillTester+4
 
-.equ gBattleData, 0x203A4D4
-
 push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
@@ -30,6 +28,12 @@ ble End @skip if str is less or equal
 @add 3 damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
+add r0, #3
+strh r0, [r4,r1]
+
+@add 3 defense/res
+mov r1, #0x5c
+ldrh r0, [r4, r1] @def
 add r0, #3
 strh r0, [r4,r1]
 
