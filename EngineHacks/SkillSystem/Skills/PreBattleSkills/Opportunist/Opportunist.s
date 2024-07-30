@@ -21,9 +21,16 @@ ldr		r1, OpportunistID
 cmp		r0,#0x0
 beq		GoBack
 
+@add damage
 add		r4,#0x5A
 ldrh	r0,[r4]
-add		r0,#4
+add		r0,#2
+strh	r0,[r4]
+
+@add hit
+add		r4,#0x60
+ldrh	r0,[r4]
+add		r0,#15
 strh	r0,[r4]
 
 GoBack:
