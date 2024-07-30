@@ -34,6 +34,13 @@ ldrh r3,[r0]
 add r3,#30
 strh r3,[r0]
 
+@hit
+add r0,#0x60
+ldrh r3,[r0]
+add r3,#30
+strh r3,[r0]
+
+
 
 GoBack:
 pop {r4-r7}
