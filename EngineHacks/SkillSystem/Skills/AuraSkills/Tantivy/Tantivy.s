@@ -32,12 +32,17 @@ bne Done
 mov r0, r4
 add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's hit into r3.
-add     r3,#10    @add 10 hit.
+add     r3,#20    @add 20 hit.
 strh    r3,[r0]     @Store.
 
 add r0, #2 @attacker's avoid
 ldrh    r3,[r0]     @Load the attacker's avoid into r3.
-add     r3,#10    @add 10 avoid.
+add     r3,#20    @add 20 avoid.
+strh    r3,[r0]     @Store.
+
+add r0, #4 @attacker's crit
+ldrh    r3,[r0]     @Load the attacker's avoid into r3.
+add     r3,#20    @add 20 crit.
 strh    r3,[r0]     @Store.
 
 Done:
