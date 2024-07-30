@@ -39,7 +39,14 @@ beq End
 @ NotMin:
 @ strh r0, [r5,r1]
 
-mov r1, #0x5c
+@damage taken
+mov r1, #0x5C
+ldrsh r0, [r4, r1] @atk
+add r0, #3
+strh r0, [r4,r1]
+
+@damage dealt
+mov r1, #0x5A
 ldrsh r0, [r4, r1] @atk
 add r0, #3
 strh r0, [r4,r1]
