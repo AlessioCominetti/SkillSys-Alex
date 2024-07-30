@@ -33,6 +33,12 @@ ldrh r0, [r4, r1] @Avoid
 add r0, #15
 strh r0, [r4,r1]
 
+mov r1, #0x60
+ldrh r0, [r4, r1] @Hit
+add r0, #15
+strh r0, [r4,r1]
+
+
 End:
 pop {r4-r7, r15}
 .align
