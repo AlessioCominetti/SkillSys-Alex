@@ -1038,7 +1038,7 @@
 
 //Armsthrift: Luck % chance to not consume weapon durability.
 //Author Unknown (Initial Commit)
-#define ArmsthriftID 138
+#define ArmsthriftID 255
 
 //Blessing: Guaranteed to not consume weapon durability.
 //By Snerdels
@@ -1417,7 +1417,7 @@
 
 //Decapitator: Grants Atk = foe's missing HP; +80 Hit/Crit if foe's HP is below half.
 // By Devisio
-#define DecapitatorID 255
+#define DecapitatorID 138
 
 //Pathfinder: Allies within 3 spaces can Canto.
 // By Devisio
@@ -1431,6 +1431,38 @@
 //By Sme
 #define TempestID 255 //Requires Biorhythm
 #define SerenityID 255 //Requires Biorhythm
+
+//VengefulBlow: Add unit missing hp to attack and crit
+//By FrecciaVerde
+#define VengefulBlowID 255
+
+//DextrousBlow: Add unit SKL/4 to attack when initiating
+//By FrecciaVerde
+#define DextrousBlowID 255
+
+//Channeling: If this unit didn't move before initiating combat, +100 crit
+//By FrecciaVerde
+#define ChannelingID 255
+
+//Awakened: +1 damage for each four turns, up to 4
+//By FrecciaVerde
+#define AwakenedID 255
+
+//Evasive Maneuver: +1 move fore each 25% hp missing
+//By FrecciaVerde
+#define EvasiveManeuverID 255
+
+//Stunning Grace: if there are no allies in three tiles, enemies in three tiles get -20 hit
+//By FrecciaVerde
+#define StunningGraceID 255
+
+//Careful: if there are two adiacent enemies, unit get +15 hit/avoid
+//By FrecciaVerde
+#define CarefulID 255
+
+//Mana Sapper: when facing magical enemies, add enemy MAG/2 to unit speed
+//By FrecciaVerde
+#define ManaSapperID 255
 
 
 //Display-Only Skills
