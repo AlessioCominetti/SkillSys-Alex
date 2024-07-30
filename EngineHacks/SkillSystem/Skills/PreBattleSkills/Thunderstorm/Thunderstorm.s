@@ -50,7 +50,12 @@ ble End
 @Add stuff
 mov r1, #0x5A
 ldrh r0, [r4, r1]
-add r0, #0x2
+add r0, #0x3
+strh r0, [r4,r1]
+
+mov r1, #0x5C
+ldrh r0, [r4, r1]
+add r0, #0x3
 strh r0, [r4,r1]
 
 mov r1, #0x60
@@ -60,7 +65,7 @@ strh r0, [r4,r1]
 
 mov r1, #0x66
 ldrh r0, [r4, r1]
-add r0, #0x5
+add r0, #0x15
 strh r0, [r4,r1]
 
 End:
