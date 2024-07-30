@@ -29,15 +29,13 @@ beq		End
 @check range
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
-cmp r0,#1
+cmp r0,#2    @range 2
 bne End
 
-@store magic/2 in r6
+@store magic in r6
 mov		r1,#0x3A
 ldrb	r6,[r4,r1]
-lsr		r6,#1
 
-add		r6,#3 @add 3
 
 @hit
 mov r1, #0x60
