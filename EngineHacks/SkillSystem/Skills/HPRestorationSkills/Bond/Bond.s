@@ -22,7 +22,7 @@ mov r3, #3 @range
 .short 0xf800
 cmp r0, #0
 beq GoBack
-add r5, #10 @heal 10% hp
+add r5, #20 @heal 20% hp
 
 
 
