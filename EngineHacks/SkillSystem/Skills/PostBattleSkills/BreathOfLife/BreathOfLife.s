@@ -36,7 +36,7 @@ ldr	r0, GetUnitsInRange
 mov	lr, r0
 mov	r0, r4		@attacker
 mov	r1, #0x00   @can_trade
-mov	r2, #0x02	@range
+mov	r2, #0x03	@range
 .short	0xf800
 
 BreathOfLifeDamage:
@@ -78,8 +78,8 @@ mov	lr, r2
 @r0 is ram data
 mov	r7, r0
 ldrb	r0, [r7,#0x12]	@max hp
-mov	r1, #0x05
-swi	#0x06		@r0 max hp/5
+mov	r1, #0x04
+swi	#0x06		@r0 max hp/4
 ldrb	r1, [r7,#0x13]	@r1 = current hp
 cmp	r1, #0x00	@checking if the unit is already dead, probably not needed but w/e
 beq	NextLoop
