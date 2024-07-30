@@ -7,7 +7,7 @@ mov r5, r1 @dfdr
 
 mov r0, #0x50
 ldrb r0, [r4, r0] @r0 = Equipped weapon type
-cmp r0, #0x6 @Light weapon type
+cmp r0, #0x7 @Light weapon type
 bne End
 
 
@@ -23,24 +23,14 @@ beq End
 
 
 
-mov r1, #0x5a
-ldrh r0, [r4, r1]
-add r0, #1
-strh r0, [r4,r1]
-
 mov r1, #0x60
 ldrh r0, [r4, r1]
-add r0, #5
-strh r0, [r4,r1]
-
-mov r1, #0x62
-ldrh r0, [r4, r1]
-add r0, #5
+add r0, #10
 strh r0, [r4,r1]
 
 mov r1, #0x66
 ldrh r0, [r4, r1]
-add r0, #5
+add r0, #10
 strh r0, [r4,r1]
 
 End:
