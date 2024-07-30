@@ -2,8 +2,8 @@
 ALIGN 4 
 
 EphraimLordSkillList:
-BYTE 1 AdrenalineID
-BYTE 2 CriticalWeightID
+BYTE 1 ChivalryID
+BYTE 00 00
 ALIGN 4
 
 EirikaLordSkillList:
