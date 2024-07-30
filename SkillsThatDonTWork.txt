@@ -12,6 +12,8 @@ Earth shield- allies in five tiles get +1 defense, bonus increases for each tile
 
 Dishonoured-   if foe hp is max, double attack                                (modified chivalry)
 
+LifeTaker- after kill, once per turn, allies in three tiles get Thor's Ire for a turn, unit heal for 50% (modified Lifetaker)
+
 
 
 
