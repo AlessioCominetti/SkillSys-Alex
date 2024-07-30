@@ -51,6 +51,8 @@ pop	{r1}
 cmp	r1, r2		@check if hp is already max
 beq	End
 
+@apply status in allies in three range
+
 
 @this used to just add curHP to curHP and set that as new curHP
 @make r0 = 1/4 maxHP
