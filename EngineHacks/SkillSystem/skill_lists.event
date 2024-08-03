@@ -3,10 +3,16 @@ ALIGN 4
 
 EphraimLordSkillList:
 BYTE 1 ChivalryID
+BYTE 2 LifetakerID
+BYTE 3 AwakenedID
 BYTE 00 00
 ALIGN 4
 
 EirikaLordSkillList:
+BYTE 1 VengefulBlowID
+BYTE 2 DextrousBlowID
+BYTE 3 ChannelingID
+BYTE 4 AwakenedID
 BYTE 00 00
 ALIGN 4
 
