@@ -29,7 +29,7 @@ beq		End
 @check range
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range
-cmp r0,#2    @range 2
+cmp r0,#1
 bne End
 
 @store magic in r6
