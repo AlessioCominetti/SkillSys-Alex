@@ -2,10 +2,6 @@ RapidDeployment-  for the first three turns, +2 move                            
 
 Lightweight-  if unit has less than 4 items, gain +1 MOV and +3 attack speed     (modified ligthweight)   
 
-weapon stance-  if user weapon weight greater than foe's, +3 damage dealt -3 damage taken and +15 hit and crit (modified thunderstorm)
-
-Ghost range-  when attacking at 2 range, add MAG to hit and crit                          (modified arcane blade)
-
 Water shield- allies in five tiles get +1 resistence, bonus increases for each tile closer (modified drive res)
 
 Earth shield- allies in five tiles get +1 defense, bonus increases for each tile closer (modified drive def)
@@ -33,6 +29,8 @@ Awakened-   every four turns, +1 damage, up to +4                              (
 
 StunningGrace-   if there are no allies in three tiles, foes in three tiles -20 hit (modified focus, new ID)
 
-Careful-     +15 hit/avoid if there are two enemies adiacent to unit          (modified infiltrator, need new ID) 
+Careful-     +15 hit/avoid if there are two or more enemies adiacent to unit          (modified infiltrator, need new ID) 
 
-ManaSapper-     when facing magical foes, add foe's MAG/2 to unit attack speed (modified mage killer, new ID)
+ManaSapper-     when facing magical foes, add foe's MAG/4 to unit attack speed (modified mage killer, new ID)
+
+
