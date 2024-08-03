@@ -61,12 +61,12 @@ ldr	 r3,=#0x202BCF0
 ldrh r3, [r3,#0x10]
 mov	 r0, #0x01
 sub	 r3, r0
-cmp	 r3, #0x06
+cmp	 r3, #0x03
 bls	 SkipSet
 mov	 r3, #0x06
 
 SkipSet:
-@add turn to movement bonus (if turn is higher than 6, add 6)
+@add turn to movement bonus (if turn is higher than 3, add 3)
 add r4, r3
 
 Exit2: 
