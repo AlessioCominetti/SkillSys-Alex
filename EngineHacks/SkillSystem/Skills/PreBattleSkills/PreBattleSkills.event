@@ -500,6 +500,12 @@ CriticalWeight:
 POIN SkillTester
 WORD CriticalWeightID
 
+ALIGN 4
+Awakened:
+#incbin "Awakened/Awakened.dmp"
+POIN SkillTester
+WORD AwakenedID
+
 
 #include "KeenFighter/Installer.event" 
 #include "FlankSwarmScale/Installer.event" 
