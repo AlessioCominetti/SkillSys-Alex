@@ -33,7 +33,7 @@ POIN DefendingCheck
 #endif //BIORHYTHM
 POIN Wrath SpurStr SpurMag SpurSpd SpurDef SpurRes
 POIN DriveStr DriveMag DriveSpd DriveDef DriveRes
-POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn
+POIN LuckySeven OddRhythm EvenRhythm QuickBurn SlowBurn Awakened
 POIN Demoiselle Gentilhomme MaleficAura Intimidate Tantivy Focus Inspiration DivinelyInspiring Charm Solidarity VoiceOfPeace Anathema LilysPoise Charisma Hex Loyalty Infiltrator
 POIN TrueStrike CriticalPierce CatchingUp Detonate SandRush SlushRush SwiftSwim Technician SolarPower Analytic ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath NoGuard WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade LadyBlade LunarBraceSkill PursuerPre
 POIN Merciless StoneBody TrueStrike CriticalPierce CatchingUp Detonate SandRush SlushRush SwiftSwim Technician SolarPower Analytic ElbowRoom NaturalCover Gamble FieryBlood LifeAndDeath NoGuard WindDisciple Perfectionist Puissance Hawkeye LightWeight Trample Opportunist BattleVeteran SilentPride Thunderstorm Outrider HeavyStrikes Charge Vanity KnightAspirant AssassinateDamageBonus ArcaneBlade LadyBlade LunarBraceSkill
