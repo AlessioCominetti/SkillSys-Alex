@@ -153,7 +153,7 @@
 
 // Soul Sap: At the end of your turn, drain up to 10% health from every unit within two tiles.
 // By Vesly
-#define SoulSapID 255
+#define SoulSapID 246
 
 //Snow Warning: On the first turn of the map, set the weather condition to snowy.
 //By Jester
@@ -277,7 +277,7 @@
 
 //Resourceful: Double effectiveness multiplier.
 //By Sme
-#define ResourcefulID 48
+#define ResourcefulID 255
 
 
 //EXP Skills
@@ -302,7 +302,7 @@
 
 //Aptitude: +20% to all growth rates.
 //By Sme
-#define AptitudeID 51
+#define AptitudeID 255
 
 
 //HP Restoration Skills
@@ -355,23 +355,23 @@
 
 //Indoor March: At start of turn, if unit is on indoor terrain, unit gains +2 Mov.
 //By Sme
-#define IndoorMarchID 147
+#define IndoorMarchID 255
 
 //Nature Rush: At start of turn, if unit is on natural terrain, unit gains +2 Mov.
 //By Sme
-#define NatureRushID 146
+#define NatureRushID 255
 
 
 //Mug-Loading Skills
 
 //Quantum Visage: Face changes every time it's looked at.
 //By Leonarth
-#define RandomMugID 130
+#define RandomMugID 255
 
 
 //Identity Problems: This unit can't decide on a name or face.
 //By Leonarth
-#define IdentityProblemsID 129
+#define IdentityProblemsID 255
 
 
 //Post-Battle Skills
@@ -398,7 +398,7 @@
 
 //Fury: +2 Atk/Spd/Def/Res. Unit takes 6 damage after combat.
 //By circleseverywhere
-#define FuryID 128
+#define FuryID 23
 
 //Galeforce: Move again after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
@@ -442,7 +442,7 @@
 
 //PoisonPoint: Inflict the poison status to your opponent at the end of the battle.
 //By Jester
-#define PoisonPointID 255
+#define PoisonPointID 247
 
 //Pre-Battle Skills
 
@@ -456,7 +456,7 @@
 
 //Analytic: +10 attack if speed is less than opponent's by 4 points or more. If between 1-3 points, then +5 attack.
 //By Jester
-#define AnalyticID 255
+#define AnalyticID 248
 
 //Super Luck: Use luck as crit rate
 //By Jester
@@ -476,15 +476,15 @@
 
 //True Strike: Targets the lower stat of the opponent's defense and resistance.
 //By Jester
-#define TrueStrikeID 255
+#define TrueStrikeID 249
 
 //Critical Pierce: Nullify the enemy's crit avoid rate 
 //By Jester
-#define CriticalPierceID 255
+#define CriticalPierceID 211
 
 //Catching Up: If foe doubles unit, unit's damage increases by the amount foe is above the doubling threshold.
 //By Jester
-#define CatchingUpID 255
+#define CatchingUpID 251
 
 //Sand Rush: If the weather is a sandstorm then double this unit's attack speed.
 //By Jester
@@ -500,11 +500,11 @@
 
 //Merciless: Guranteed critical hit against poisoned foes.
 //By Jester
-#define MercilessID 255
+#define MercilessID 250
 
 //Stone Body: If your CON is greater than the enemy's reduce incoming physical damage by the difference.
 //By Jester
-#define StoneBodyID 255
+#define StoneBodyID 253
 
 //Axefaith: Axes can't lose durability, and grants +Luck*1.5 Hit when wielding axes.
 //By 2WB & Colorz
@@ -582,8 +582,8 @@
 
 //Indoor/Outdoor Fighter: +10 Hit and Avo when fighting indoors/outdoors.
 //By Sme
-#define IndoorFighterID 217
-#define OutdoorFighterID 218
+#define IndoorFighterID 255
+#define OutdoorFighterID 255
 
 //Elbow Room: +3 damage dealt when on open terrain.
 //Author Unknown (Initial Commit)
@@ -710,19 +710,19 @@
 
 //Stance Skills: Bonus to stats when defending.
 //By Snakey1
-#define BracingStanceID 246
-#define DartingStanceID 247
+#define BracingStanceID 255
+#define DartingStanceID 255
 #define FierceStanceID 255
-#define KestrelStanceID 248
-#define MirrorStanceID 249
-#define ReadyStanceID 250
-#define SteadyStanceID 251
-#define SturdyStanceID 252
-#define SwiftStanceID 253
-#define WardingStanceID 254
+#define KestrelStanceID 255
+#define MirrorStanceID 255
+#define ReadyStanceID 255
+#define SteadyStanceID 255
+#define SturdyStanceID 255
+#define SwiftStanceID 255
+#define WardingStanceID 255
 #define SpectrumStanceID 255
 //By Sme
-#define AlertStanceID 245
+#define AlertStanceID 255
 #define AlertStancePlusID 255
 
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
@@ -739,7 +739,7 @@
 
 //Trample: +5 damage to unmounted units.
 //By Tequila
-#define TrampleID 232
+#define TrampleID 255
 
 //Vanity: Gain +2 Damage and +10 Hit when fighting enemy at 2 range.
 //By Datagne
@@ -767,7 +767,7 @@
 
 //Blue Flame: Attack +2. When adjacent to an ally, Attack +4.
 //By Sme
-#define BlueFlameID 211
+#define BlueFlameID 255
 
 //Double Lion: All weapons are treated as brave.
 //By Sme
@@ -775,11 +775,11 @@
 
 //Thighdeology: If a unit within 3 tiles has Nice Thighs, gain +2 Attack and +20 Hit.
 //By Sme
-#define ThighdeologyID 187
+#define ThighdeologyID 255
 
 //Thotslayer: +15 crit against units with Nice Thighs or Personality.
 //By Sme
-#define ThotslayerID 188
+#define ThotslayerID 255
 
 //Heavy Blade: +4 Damage/-2 Attack Speed when unit’s Con. is bigger than the enemy.
 //By Mikey Seregon
@@ -791,7 +791,7 @@
 
 //Fire Boost: Grants +6 Attack if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
-#define FireBoostID 255
+#define FireBoostID 187
 
 //Wind Boost: Grants +6 Attack Speed if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
@@ -817,7 +817,7 @@
 
 //Chaos Style: AS +3 during combat with a physical weapon against a foe armed with magic or vice versa.
 //By Jopettajah
-#define ChaosStyleID 255
+#define ChaosStyleID 254
 
 //Dragonskin: Halve damage taken
 //By Jopettajah
@@ -874,11 +874,11 @@
 
 //Bane: Leave the opponent at 1 HP if the attack would kill. (Skill/2 % activation)
 //Author Unknown (Initial Commit)
-#define BaneID 20
+#define BaneID 255
 
 //Barricade: Damage taken is halved after first being struck.
 //By Snakey1
-#define BarricadeID 23
+#define BarricadeID 255
 
 //Barricade+: In combat, damage recieved equals half of the damage when struck last.
 //By Snakey1
@@ -1028,7 +1028,7 @@
 
 //High Ground: Maximum range of all tomes and bows increased by 2 when on specified terrain.
 //By Snerdels
-#define HighGroundID 255
+#define HighGroundID 188
 
 //Running Start: +1 max attack range with bows for every 2 tiles moved.
 //By Jester
@@ -1058,7 +1058,7 @@
 
 // Prideful Warrior: This unit always attacks after the enemy, but always doubles.
 // By Vesly 
-#define PridefulWarriorID 255
+#define PridefulWarriorID 20
 
 // Doubling Skills 
 
@@ -1251,7 +1251,7 @@
 
 //Draw Back: Unit moves 1 space away from target ally. Ally moves to unit’s previous space. 
 //By Vesly 
-#define DrawBackID 255
+#define DrawBackID 252
 
 //Sacrifice: Drains the user’s HP to restore the HP of another allied unit. It also cures status effects, with no HP cost to the user.
 //By Vesly 
@@ -1409,7 +1409,7 @@
 
 //Concealed Weapon: Smuggle in your equipped weapon into the arena.
 // By Jester
-#define ConcealedWeaponID 255
+#define ConcealedWeaponID 232
 
 //Pursuer: If initiating, AS +5, deals damage = 25% of Spd, Double attacks hit again.
 // By Devisio
@@ -1434,19 +1434,19 @@
 
 //VengefulBlow: Add unit missing hp to attack and crit
 //By FrecciaVerde
-#define VengefulBlowID 255
+#define VengefulBlowID 217
 
 //DextrousBlow: Add unit SKL/4 to attack when initiating
 //By FrecciaVerde
-#define DextrousBlowID 255
+#define DextrousBlowID 218
 
 //Channeling: If this unit didn't move before initiating combat, +100 crit
 //By FrecciaVerde
-#define ChannelingID 255
+#define ChannelingID 129
 
 //Awakened: +1 damage for each four turns, up to 4
 //By FrecciaVerde
-#define AwakenedID 255
+#define AwakenedID 128
 
 //Evasive Maneuver: +1 move fore each 25% hp missing
 //By FrecciaVerde
@@ -1454,15 +1454,15 @@
 
 //Stunning Grace: if there are no allies in three tiles, enemies in three tiles get -20 hit
 //By FrecciaVerde
-#define StunningGraceID 255
+#define StunningGraceID 146
 
 //Careful: if there are two adiacent enemies, unit get +15 hit/avoid
 //By FrecciaVerde
-#define CarefulID 255
+#define CarefulID 147
 
 //Mana Sapper: when facing magical enemies, add enemy MAG/2 to unit speed
 //By FrecciaVerde
-#define ManaSapperID 255
+#define ManaSapperID 51
 
 
 //Display-Only Skills
