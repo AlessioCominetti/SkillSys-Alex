@@ -38,12 +38,12 @@ mov		r14,r3
 .short	0xF800
 cmp		r0,#0
 beq		End
-ldrb	r0,[r4,#0x15]	@skill% proc rate
-@mov		r0,#100			@for testing
+ldrb	r0,[r4,#0x15]	@skill of user
 mov		r1,r4
-blh		d100Result
+ldrb	r0,[r5,#0x15]	@skill of foe
+mov		r2,r5
 cmp		r0,#1
-bne		End				@didn't proc
+ble		End				@didn't proc
 
 @if we proc, set the offensive skill and poison flag
 ldr     r2,[r6]    
