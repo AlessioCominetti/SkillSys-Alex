@@ -35,9 +35,10 @@ beq End
 
 ldrb r0, [r4, #0x15] @skill stat as activation rate
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @skill stat as activation rate
+mov r2, r5 @skill foe
+cmp r1, r2
+bgt End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -60,16 +61,17 @@ ldr	r1,LiquidOozeID
 ldr	r3,SkillTester
 mov	lr,r3
 .short	0xF800
-mov	  r1, #4
+mov	r1, #4
 ldsh	r1, [r7, r1]    @ damage
-ldrb  r2, [r5, #0x13] @ defender's curr hp
-cmp   r1, r2
+lsr     r1,r1,#1        @divide heal by 2
+ldrb    r2, [r5, #0x13] @ defender's curr hp
+cmp     r1, r2
 ble   defLives        @ Damage taken / HP healed by attacker
   mov   r1, r2        @ can't exceed damage dealt to defender.
 defLives:
 cmp	r0,#0
-beq	noOoze
-  neg   r1, r1
+beq	noOoze 
+  neg   r1, r1        @if foe has Ooze, take damage
 noOoze:
 mov   r2, #0x5
 ldsb	r2,[r6,r2]	@hp change
