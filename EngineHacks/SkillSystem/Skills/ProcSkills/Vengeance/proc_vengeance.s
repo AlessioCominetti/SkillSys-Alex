@@ -37,9 +37,10 @@ beq End
 
 ldrb r0, [r4, #0x15] @skill stat as activation rate
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @skill stat as activation rate
+mov r2, r5 @skill foe
+cmp r1, r2
+bgt End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -62,7 +63,7 @@ add r0,#0x72
 ldrb r0,[r0] @current HP before battle
 ldrb r1,[r4,#0x13] @current HP during battle
 sub r0,r1 @r0=difference in HP
-lsr r0,#1 @r0=difference in HP/2
+lsr r0,#2 @r0=difference in HP/4
 ldrb r2,[r7,#4]
 add r2,r0 @add half damage taken to attack
 cmp r2,#0x7f @damage cap of 127
