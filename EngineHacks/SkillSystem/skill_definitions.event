@@ -47,9 +47,9 @@
 //By Sme
 #define DriveStrID 255
 #define DriveMagID 255
-#define DriveSpdID 255
-#define DriveDefID 255
-#define DriveResID 255
+#define DriveSpdID 33
+#define DriveDefID 34
+#define DriveResID 35
 
 //Focus: +10 Critical if there are no allies within 3 tiles.
 //Author Unknown (Initial Commit)
@@ -858,7 +858,7 @@
 
 //Adept: Gain a consecutive attack. (Speed % activation)
 //Author Unknown (Initial Commit)
-#define AdeptID 255
+#define AdeptID 147
 
 //Aegis: Nullify a magic attack. (Skill % activation)
 //Author Unknown (Initial Commit)
@@ -894,7 +894,7 @@
 
 //Corona: Negate enemy resistance. (Skill% activation)
 //By Sme
-#define CoronaID 35
+#define CoronaID 255
 
 //Counter: Reflect physical damage when attacked at 1-2 range.
 //Author Unknown (Initial Commit)
@@ -938,7 +938,7 @@
 
 //Flare: Halve enemy resistance. (Skill% activation)
 //By Sme
-#define FlareID 34
+#define FlareID 255
 
 //Foresight: Avoid the damage from enemy Critical Hits and Skill Activations.
 //By Leonarth
@@ -1413,7 +1413,7 @@
 
 //Pursuer: If initiating, AS +5, deals damage = 25% of Spd, Double attacks hit again.
 // By Devisio
-#define PursuerID 255
+#define PursuerID 146
 
 //Decapitator: Grants Atk = foe's missing HP; +80 Hit/Crit if foe's HP is below half.
 // By Devisio
@@ -1451,14 +1451,6 @@
 //Evasive Maneuver: +1 move fore each 25% hp missing
 //By FrecciaVerde
 #define EvasiveManeuverID 255
-
-//Stunning Grace: if there are no allies in three tiles, enemies in three tiles get -20 hit
-//By FrecciaVerde
-#define StunningGraceID 146
-
-//Careful: if there are two adiacent enemies, unit get +15 hit/avoid
-//By FrecciaVerde
-#define CarefulID 147
 
 //Mana Sapper: when facing magical enemies, add enemy MAG/2 to unit speed
 //By FrecciaVerde
