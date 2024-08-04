@@ -25,8 +25,8 @@ cmp r0, r1
 bge EndInjureAttacker @ Leave if the defender isn't doing damage. The defense is greater than the attack
 ldrb r0, [ r4, #0x12 ] @ Max HP
 lsl r0, r0, #1 @ Multiply by 2
-mov r1, #10
-blh #0x080D18FC, r3 @ r0 has 20% of the max HP
+mov r1, #3
+swi  #0x06		@r0 max hp/3
 ldrb r1, [ r4, #0x13 ]
 cmp r0, r1
 bge SetAttacker1HP
@@ -62,8 +62,8 @@ cmp r0, r1
 bge EndInjureDefender @ Leave if the attacker isn't doing damage.
 ldrb r0, [ r5, #0x12 ] @ Max HP of defender
 lsl r0, r0, #1 @ Multiply by 2
-mov r1, #10
-blh #0x080D18FC, r3 @ r0 has 20% of the max HP
+mov r1, #3
+swi	#0x06		@r0 max hp/3
 ldrb r1, [ r5, #0x13 ]
 cmp r0, r1
 bge SetDefender1HP
