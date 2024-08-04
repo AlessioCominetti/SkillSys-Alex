@@ -63,7 +63,7 @@ mov	 r0, #0x01
 sub	 r3, r0
 cmp	 r3, #0x03
 bls	 SkipSet
-mov	 r3, #0x06
+mov	 r3, #0x03
 
 SkipSet:
 @add turn to movement bonus (if turn is higher than 3, add 3)
