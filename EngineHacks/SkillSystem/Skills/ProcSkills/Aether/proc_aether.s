@@ -43,12 +43,12 @@ cmp r0, #0
 beq End
 @if user has Aether, check for proc rate
 
-ldrb r0, [r4, #0x15] @skill/2 stat as activation rate
-lsr r0, #1
+ldrb r0, [r4, #0x15] @user skill
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @user skill
+mov r2, r5 @skill user
+cmp r1, r2
+bgt End
 
 @if we proc, set the brave effect flag for the NEXT hit
 ldrb r1, AetherID @first mark Aether active
@@ -80,6 +80,7 @@ ldrsb r2, [r4,r2] @curr hp
 mov r1, #0x12
 ldrsb r1, [r4,r1] @max hp
 sub r1, r2 @damage taken
+lsr r1,r1,#2    @divide heal by 4
 cmp r1, r0
 bge NoCap
   @if hp will cap, set r0 to damage taken
@@ -109,11 +110,13 @@ b End
 
 SecondHit:
 //this is the Luna hit.
-@recalculate damage with def=0
-ldrh r0, [r7, #6] @final mt
-ldr r2, [r6]
-mov r1, #1
-tst r1, r2
+@and set attacker (def or res)=(def or res)*.75
+mov r1, #0x5C
+ldrh r0, [ r4, r1 ] @Load def/res
+mov r2, #0x3 
+mul r0,r2 @Multiply def/res by 3
+lsr r0,r0,#0x2 @Divide def/res by 4
+strh r0, [ r4, r1 ]
 beq NoCrit
 @if crit, multiply by 3
 lsl r1, r0, #1
