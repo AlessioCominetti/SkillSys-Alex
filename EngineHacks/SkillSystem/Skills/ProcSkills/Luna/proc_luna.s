@@ -34,9 +34,10 @@ beq End
 
 ldrb r0, [r4, #0x15] @skill stat as activation rate
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @skill stat as activation rate
+mov r2, r5 @skill foe
+cmp r1,r2
+bgt End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -53,11 +54,11 @@ str     r0,[r6]                @ 0802B43A 6018
 ldrb  r0, LunaID
 strb  r0, [r6,#4] 
 
-@and recalculate damage with def=0
-ldrh r0, [r7, #6] @final mt
-ldr r2, [r6]
-mov r1, #1
-tst r1, r2
+@and set attacker (def or res)=(def or res)/2
+mov r1, #0x5C
+ldrh r0, [ r4, r1 ] @Load def/res
+lsr r0,r0,#0x1 @Divide def/res by 2
+strh r0, [ r4, r1 ]
 beq NoCrit
 @if crit, multiply by 3
 lsl r1, r0, #1
