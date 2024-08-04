@@ -34,9 +34,10 @@ beq End
 
 ldrb r0, [r4, #0x15] @skill stat as activation rate
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @skill stat as activation rate
+mov r2, r5 @skill foe
+cmp r1, r2
+bgt End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -59,6 +60,7 @@ lsl r0, #0x10
 asr r0, #0x10
 lsl r1, r0, #1
 add r0, r1 @multiply mt by 3
+lsr r0, #1 @divide by 2, in total, str is multiplied by 2
 ldrh r1, [r7, #8] @final def
 lsl r1, #0x10
 asr r1, #0x10
