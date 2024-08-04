@@ -34,9 +34,10 @@ beq End
 
 ldrb r0, [r4, #0x15] @skill stat as activation rate
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
+ldrb r0, [r5, #0x15] @skill stat as activation rate
+mov r2, r5 @skill foe
+cmp r1,r2
+bgt End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -56,6 +57,7 @@ strb  r0, [r6,#4]
 @add res to damage dealt
 mov r0, r4
 blh 0x8019270 @res getter
+lsr r0, #1  @divide res by 2
 
 ldr r2, [r6]
 mov r1, #1
