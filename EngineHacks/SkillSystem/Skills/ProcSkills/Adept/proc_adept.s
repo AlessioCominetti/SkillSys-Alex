@@ -40,11 +40,12 @@ cmp r0, #0
 beq End
 @if user has Adept, check for proc rate
 
-ldrb r0, [r4, #0x16] @speed stat as activation rate
+ldrb r0, [r4, #0x16] @user speed stat
 mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End 
+ldrb r0, [r5, #0x16] @enemy speed stat
+mov r2, r5 @skill foe
+cmp r1, r2
+bgt End 
 
 @if we proc, set the brave effect flag for the NEXT hit
 ldrb r1, AdeptID @first mark Adept active
