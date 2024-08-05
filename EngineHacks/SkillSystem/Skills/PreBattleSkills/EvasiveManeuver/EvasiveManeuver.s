@@ -50,7 +50,6 @@ mul r2,r3
 @add 1 MOV  using r2
 ldr r1, =EvasiveManeuverID_Link
 ldr r1,[r1]
-bl SkillTester
 cmp r0,#0
 beq End
 add r4,r2  @add Mov
