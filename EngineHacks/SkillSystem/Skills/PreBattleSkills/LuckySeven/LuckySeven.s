@@ -20,10 +20,12 @@ cmp	r0, #0
 beq	End
 
 @add 2 to move
-mov	r0, #0x1D
-ldrh	r1, [r4,r0]	@load move
-add	r1, #0x02	@add 2 to move
-strh	r1, [r4,r0]     @store
+ldr r1, =LuckySevenID_Link
+ldr r1,[r1]
+bl SkillTester
+cmp r0,#0
+beq End
+add r4,#2   @add 2 move
 
 End:
 pop	{r4, r15}
