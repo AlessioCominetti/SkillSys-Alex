@@ -1,6 +1,4 @@
-RapidDeployment-  for the first three turns, +2 move                            (modified lucky seven)
-
-Lightweight-  if unit has less than 4 items, gain +1 MOV and +3 attack speed     (modified ligthweight)   
+RapidDeployment-  for the first three turns, +2 move                            (modified lucky seven) 
 
 Water shield- allies in five tiles get +1 resistence, bonus increases for each tile closer (modified drive res)
 
