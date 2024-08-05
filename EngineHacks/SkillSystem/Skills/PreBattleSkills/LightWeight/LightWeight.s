@@ -29,7 +29,6 @@ strh r0, [r4,r1]
 @add 1 MOV
 ldr r1, =LightWeightID_Link
 ldr r1,[r1]
-bl SkillTester
 cmp r0,#0
 beq End
 add r4,#1   @add 1 MOV
