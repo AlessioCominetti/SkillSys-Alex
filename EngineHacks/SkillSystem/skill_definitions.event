@@ -1448,9 +1448,9 @@
 //By FrecciaVerde
 #define AwakenedID 128
 
-//Evasive Maneuver: +1 move fore each 25% hp missing
+//EvasiveManeuver: +1 move fore each 25% hp missing
 //By FrecciaVerde
-#define EvasiveManeuverID 255
+#define EvasiveManeuverID 4
 
 //Mana Sapper: when facing magical enemies, add enemy MAG/2 to unit speed
 //By FrecciaVerde
@@ -1459,7 +1459,7 @@
 
 //Display-Only Skills
 
-#define CunningID 4
+#define CunningID 255
 #define NiceThighsID 115
 #define PersonalityID 116
 
