@@ -2,7 +2,8 @@
 ALIGN 4 
 
 EphraimLordSkillList:
-BYTE 1 LightWeightID
+BYTE 1 EvasiveManeuverID
+BYTE 2 LuckySevenID
 BYTE 00 00
 ALIGN 4
 
