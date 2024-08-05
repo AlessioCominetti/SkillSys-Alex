@@ -506,6 +506,11 @@ Awakened:
 POIN SkillTester
 WORD AwakenedID
 
+ALIGN 4
+EvasiveManeuver:
+#incbin "EvasiveManeuver/EvasiveManeuver.dmp"
+POIN SkillTester
+WORD EvasiveManeuverID
 
 #include "KeenFighter/Installer.event" 
 #include "FlankSwarmScale/Installer.event" 
