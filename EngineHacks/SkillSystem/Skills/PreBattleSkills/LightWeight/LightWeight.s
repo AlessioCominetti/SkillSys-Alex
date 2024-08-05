@@ -27,10 +27,12 @@ add r0, #3
 strh r0, [r4,r1]
 
 @add 1 MOV
-mov r1, #0x1D
-ldrh r0, [r4, r1] @MOV
-add r0, #1
-strh r0, [r4,r1]
+ldr r1, =LightWeightID_Link
+ldr r1,[r1]
+bl SkillTester
+cmp r0,#0
+beq End
+add r4,#1   @add 1 MOV
 
 End:
 pop {r4-r7, r15}
