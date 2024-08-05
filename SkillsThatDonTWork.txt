@@ -6,10 +6,17 @@ Water shield- allies in five tiles get +1 resistence, bonus increases for each t
 
 Earth shield- allies in five tiles get +1 defense, bonus increases for each tile closer (modified drive def)
 
-Dishonoured-   if foe hp is max, double attack                                (modified chivalry)
+Fire shield- allies in five tiles get +1 strenght, bonus increases for each tile closer (modified drive str)
 
-LifeTaker- after kill, once per turn, allies in three tiles get Thor's Ire for a turn, unit heal for 50% (modified Lifetaker)
+Ice shield- allies in five tiles get +1 magic, bonus increases for each tile closer (modified drive mag)
 
+Thunder shield- allies in five tiles get +1 speed, bonus increases for each tile closer (modified drive spd)
+
+Wind shield- allies in five tiles get +3 hit/crit, bonus increases for each tile closer (modified drive spd, new ID)
+
+Envy-   if foe hp is max, double attack                                (modified chivalry)
+
+Pride-  if foe hp is not max, double attack                                (modified pragmatic)
 
 
 
@@ -21,16 +28,18 @@ Evasive Maneuver-  +1 MOV for each 25% hp lost                                  
 
 VengefulBlow-    add current missing hp to hit/crit when initiaing combat     (added new blow skill, new ID)
 
-Dextrous- when initiating combat, add SKL/4 to damage                         (added new blow skill, new ID)
+Dextrous-     when initiating combat, add SKL/4 to damage                         (added new blow skill, new ID)
 
 Channeling-   if initiatin combat while not moving, always crit               (added new blow skill, new ID) 
-
-Awakened-   every four turns, +1 damage, up to +4                              (modified slow burn, new ID)
-
-StunningGrace-   if there are no allies in three tiles, foes in three tiles -20 hit (modified focus, new ID)
-
-Careful-     +15 hit/avoid if there are two or more enemies adiacent to unit          (modified infiltrator, need new ID) 
 
 ManaSapper-     when facing magical foes, add foe's MAG/4 to unit attack speed (modified mage killer, new ID)
 
 
+ICONE
+Awakened
+Evasive Maneuver
+VengefulBlow
+Dextrous
+Channeling
+ManaSapper
+Wind Shield
