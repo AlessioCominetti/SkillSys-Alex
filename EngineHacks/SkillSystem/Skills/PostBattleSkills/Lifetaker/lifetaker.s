@@ -35,7 +35,7 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
-@killed enemy, then heal 50%hp
+@killed enemy, then heal 25%hp
 mov	r0,r4
 ldr	r3,=#0x8019190	@max hp getter
 mov	lr,r3
@@ -53,7 +53,7 @@ beq	End
 
 
 @this used to just add curHP to curHP and set that as new curHP
-@make r0 = 1/2 maxHP
+@make r0 = 1/4 maxHP
 lsr r0,r1,#1 @maxHP/2
 
 add	r2, r0		@total healing
