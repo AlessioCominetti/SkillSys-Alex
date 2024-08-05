@@ -176,13 +176,13 @@ b       SkillReturn	@Attacker's attack. Redundancy? Nah.
 
 DextrousBlowSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
-ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r0,#0x15    @move to attacker's skl 
-ldr     r2,[r0]     @load the attacker's skl into r2
-lsr     r2,r2,#2    @divide skl by 4
-add     r3,r2       @Add a quarter of unit skl to damage
-add     r0,#0x45    @return to attacker's dmg
-strh    r3,[r0]     @Store attacker dmg.
+mov     r2,r0       @save a copy in r2
+add     r0,#0x5A    @Move to the attacker's attack.
+ldrh    r3,[r0]     @Load the attacker's attack into r3.
+add     r2,#0x15   @load attacker skill
+lsr     r2,#2      @divide skill by 4
+add     r3,r2    @Skl to damage
+strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn
 
 VengefulBlowSkill:    @add missing unit hp to hit and crit
