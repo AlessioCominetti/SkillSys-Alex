@@ -22,7 +22,6 @@ beq	End
 @add 2 to move
 ldr r1, =LuckySevenID_Link
 ldr r1,[r1]
-bl SkillTester
 cmp r0,#0
 beq End
 add r4,#2   @add 2 move
