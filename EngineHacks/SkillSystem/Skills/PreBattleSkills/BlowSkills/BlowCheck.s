@@ -178,9 +178,9 @@ DextrousBlowSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
 add     r0,#0x15    @move to attacker's skl 
-ldr     r6,[r0]     @load the attacker's skl into r6
-lsr     r6,r6,#2    @divide skl by 4
-add     r3,r6       @Add a quarter of unit skl to damage
+ldr     r2,[r0]     @load the attacker's skl into r2
+lsr     r2,r2,#2    @divide skl by 4
+add     r3,r2       @Add a quarter of unit skl to damage
 add     r0,#0x45    @return to attacker's dmg
 strh    r3,[r0]     @Store attacker dmg.
 b       SkillReturn
