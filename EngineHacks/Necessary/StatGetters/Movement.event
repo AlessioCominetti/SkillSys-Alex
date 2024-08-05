@@ -30,6 +30,10 @@ prAddUnitMovBonus:
 prSkillCelerity:
 	rIfUnitHasSkill(CelerityID)
 		rAddConst(2)
+
+prSkillSpeedBoost:
+        rIfIUnitHasSkill(SpeedBoostID)
+                rAddConst(1)
 		
 prSkillPoise:
 	rIfUnitHasSkill(PoiseID)
