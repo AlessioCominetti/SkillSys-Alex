@@ -1,0 +1,152 @@
+Alex-   Will to live-  if unit hp<50%,  +25% in str/mag/skl/spd/lck/def/res               (modified resolve)  
+Automatically on chapte 1
+
+Enrico-  furiour charge-  for each space moved, +1 damage and -1 damage taken             (replace charge)   
+Automatically on chapter 1
+
+Luca-  darting blow-   when attacking, +3 attack speed                                    (modified darting blow) 
+Automatically on chapter 1
+
+David-  knight aspirant-    when above 75% hp, +15 hit/avoid and +2 damage                (modified knight aspirant)  
+Automaiìtially on chapter 1
+
+Javier-  Self care-    when healing an ally, heal itself                                    
+Automatically on chapter 1
+
+Sero-    unfair fight- if foe cannot counter, unit +15 hit and +2 damage                  (replace opportunist)  
+Automatically on chapter 1
+
+Miguel-  critical charge-  for each space moved, +5% crit                                 (modified outrider)   
+Talk with Sero,Alex or Henry
+
+Tullio-  Rapid Deployment-  for the first three turns, +2 move                            (modified lucky seven)  
+Talk with Sero,Alex or Henry
+
+Vitania- Adrenaline-      +1 attack speed for each 8 hp missing                           (modified frenzy)  
+Automatically on chapter 3
+
+Saetos-  Terrain master-   while on rough terrain, +3 damage dealt, -3 damage taken       (modified natural cover)  
+Automatically on chapter 3
+
+Jinga-   Keep it up-   command,  allies n three tiles, +2 MOV                             (modified rally move)   
+Automatically on chapter 3
+
+Icarus-  Fire will- if user hp is not max, +3 damage                                      (modified fiery blood)  
+Automatically on chapter 3
+
+Remus-   Wind Walker-  if user hp is not max, +15hit/avoid                                (modified wind disciple)  
+Automatically on chapter 3
+
+Elise-   Isolation-   if there are no allies in three tiles, +20 crit/hit/avoid/crit avoid    (modified tantivy)  
+Automatically on chapter 3
+
+Faraday- Galvanized-  if user hp is max, +3 attack speed and +15 hit/avoid                (modify perfectionist) 
+Automatically on chapter 3
+
+Janna-  Hexing Curse- enemies in three tiles -10 hit/avoid/crit/crit avoid                (modified anathema)   
+Automatically on chapter 3
+
+Monica-  Lightweight-  if unit has less than 4 items, gain +1 MOV and +3 attack speed     (modified ligthweight)   
+Automatically on chapter 3
+
+Gawain-  Last stand-  if there are three or more foes in three tiles, this unit deal
++4 damage  and take -4 damage                                                             (modified infiltrator) 
+Automatically on chapter 3
+
+Lenora-  hospitalier-   allies in three tiles recover 20% of hp every start of turn       (modified bond)  
+Automatically on chapter 4
+
+Super Macho Man-  Narcisist-  when attacking at 2 range,  +2 damage +15 hit/avoid         (modified vanity)  
+Talk with anybody
+
+Nilo-  Inspiration-  allies in three tiles +3 damage dealt and -3 damage taken            (modified inspiration) 
+At the end of chapter 12
+
+Roze-   Ultra instinct-   +30 hit/avoid if hp<25%                                         (modified deviant avoid) 
+At the end of chapter 5
+
+Rosanna-  Silent Killer-  if there are no allies in five tiles,  +100 crit                   (modified focus)  
+Automatically on chapter 7
+
+Hekaton- weapon stance-  if user weapon weight greater than foe's, +3 damage dealt -3 damage taken (modify thunderstorm) 
++15 hit and crit 
+Automatically on chapter 6
+
+Nasime-  Ghost range-  when attacking at 2 range, add MAG to hit and crit                          (modified arcan blade) 
+Automatically on chapter 8
+
+Shalla-  Water shield- allies in five tiles get +1 resistence, bonus increases for each unit closer (modified drive res) 
+At the end of chapter 8
+
+Koana-   Suppression-   if unit STR is bigger than foe, ignore half of foe defense        (modified  puissance)  
+At the end of chapter 8
+
+Gerra-  Bloodlust-     on kill, once per turn, allies in three tiles get +10 Crit for one turn  
+and she heals for 50% of max hp                                                           (modified life taker)  
+Automatically on chapter 9
+
+Einaudi- Evasive Maneuver-  +1 MOV for each 25% hp lost                                   (modified silent pride, need new ID) 
+Automatically on chapter 9
+
+Vilnius-  Refreshing tune-  after refreshing a unit, said unit gain +2 str/mag/def/res      
+Automatically on chapter 9
+
+Dakuwaqa-  Wrath-    +30 crit if hp<50%                                                   (modified wrath)   
+Automatically on chapter 10
+
+Tovouno-  Earth shield- allies in five tiles get +1 defense, bonus increases for each unit closer (modified drive def)  
+Automatically on chapter 11
+
+Donata-   Perfect blow-   +30 hit/avoid when initiating combat                         (modified  prescience)  
+At the end of chapter 10
+
+Edge-   Vengeful blow-    add current missing hp to hit/crit when initiaing combat     (added new blow skill, new ID)  D
+Visit east house on chapter 11
+
+Larax-  War cry-    command, allies in three tiles  +4 str/mag/def/res                 (modified rally str)   
+Visit west house on chapter 11
+
+Naica-  Sylvan Blow- when initiating combat at one range, 
+add this unit MAG/2 to melee attacks                                                   (added new blow skill, new ID)  
+Talk with Alex on chapter 11
+
+Tara-   Despoil-     when defeating an enemy,  obtain  1000 Gold                       (modified despoil) 
+Talk with Alex on chapter 12
+
+Grey-   Mage bane-   always crit when facing magical enemies and +2 damage             (modified mage killer)  
+Visit village on chapter 13
+
+FC-     Terrify-     Adiacent enemies   -30 avoid                                      (modified Hex)   
+End of chapter 16x
+
+Vert-   Prediction-   Always attack first, negate criticals                         
+Start of chapter 17
+
+Choose one of these four at the end of chapter 5x     
+Neria-  Inflammation-  after combat, seal foe's RES by 8
+Nyma-   Dent-          after combat, seal foe's DEF by 8
+Sima-   Breeze-        after combat, seal foe's MAG by 8
+Selia-  Shock-         after combat, seal foe's STR by 8
+
+Giselle-  Channeling-   if attacking while not moving, always crit                      (added new blow skill, new ID) 
+Start of chapter 5
+
+Paolus-  Solidarity-    allies in three tiles +10 crit and crit avoid               
+Start of chapter 7
+
+Lokta-   Awakened-   every four turns, +1 damage, up to +4                              (modified slow burn)  
+End of chapter 11
+
+Amea-    Stunning Grace-   if there are no allies in three tiles, foes in three tiles -20 hit (modified focus, new ID)  
+Visit village of chapter 9
+
+Mictlan-  Mana sapper-     when facing magical foes, add foe's MAG/2 to unit attack speed (modified mage killer, new ID)  
+Vazga-    Dishonoured-   if foe hp is max, double attack                                (modify chivalry)     
+Quetza-   Astrology-    on even turns, +10 hit/Avoid, on odd turns, +10 crit/crit avoid (modified even rythm)     
+
+Garda-     X
+Blaze-     X
+Ascanio-  silent pride-   +2damage dealt and -2 damage dealt for each 25% hp lost        
+Fiana-    careful-     +15 hit/avoid if there are two enemies adiacent to unit          (modified infiltrator, need new ID)   
+
+Modified battle veteran       (+3 might and +10 hit for each 10 lvl this unit has, promoted count as +20)  
