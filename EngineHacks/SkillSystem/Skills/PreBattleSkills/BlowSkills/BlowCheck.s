@@ -147,6 +147,7 @@ ldrb r0, [r0, #0x13] @currhp
 cmp r0, r1
 bne SkillReturn
 @allows unit to double attack
+ldr r0,=0x203A4EC @Move attacker data into r0.
 mov r0,r4
 add r0,#0x4C @item ability word
 ldr r1,[r0]
@@ -161,15 +162,13 @@ ldrb r1, [r0, #0x12] @maxhp
 ldrb r0, [r0, #0x13] @currhp
 cmp r0, r1
 beq SkillReturn
-ldr     r0,=0x203A4EC       @Move attacker data into r0.
-add     r0,#0x5a    @Move to the attacker's dmg.
-ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#3    @Add 3 to the attacker's dmg.
-strh    r3,[r0]     @Store attacker dmg.
-add     r0,#2    @Move to the attacker's def.
-ldrh    r3,[r0]     @Load the attacker's def into r3.
-add     r3,#1    @Add 1 to the attacker's def.
-strh    r3,[r0]     @Store attacker def.
+ldr r0,=0x203A4EC  @Move attacker data into r0.
+mov r0,r4
+add r0,#0x4C @item ability word
+ldr r1,[r0]
+mov r2,#0x20 @brave flag
+orr r1,r2
+str r1,[r0]
 b       SkillReturn
 
 HeroesDeathSkill:
