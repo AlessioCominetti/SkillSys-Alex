@@ -42,8 +42,14 @@ cmp     r4, #0x07
 beq     ChivalrySkill
 cmp     r4, #0x08
 beq     PragmaticSkill
-cmp		r4, #0x09
-beq		HeroesDeathSkill
+cmp	r4, #0x09
+beq	HeroesDeathSkill
+cmp     r4, #0x0A
+beq     VengefulSkill
+cmp     r4, #0x0B
+beq     DextrousSkill
+cmp     r4, #0x0C
+beq     ChannelingSkill
 b SkillReturn
 EndProgram:		@I had to move this to stop out of range errors. - Darrman
 pop {r4-r7}
@@ -174,7 +180,7 @@ add     r3,#0x6    @Add 6 to the attacker's attack.
 strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn	@Attacker's attack. Redundancy? Nah.
 
-DextrousBlowSkill:
+DextrousSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 mov     r2,r0       @save a copy in r2
 add     r0,#0x5A    @Move to the attacker's attack.
@@ -185,23 +191,27 @@ add     r3,r2    @Skl to damage
 strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn
 
-VengefulBlowSkill:    @add missing unit hp to hit and crit
-ldr     r4,=0x203A4EC       @Move attacker data into r0.
-ldrb    r0,[r4,#0x12] @attacker max hp
-ldrb    r1,[r4,#0x13] @attacker current hp
-sub     r0,r1         @remaining hp
-ldrh    r1,[r4,r2]
-add     r1,r0,r1
-strh    r1,[r4,r2]
-mov     r6,r0         @store remainig hp value
-add     r4,#0x60    @Move to the attacker's hit.
-ldrh    r3,[r4]     @Load the attacker's hit into r3.
-add     r3,r6       @Add r6 to the attacker's hit.
-strh    r3,[r4]     @Store attacker hit.
-add     r4,#0x66    @Move to the attacker's crit.
-ldrh    r3,[r4]     @Load the attacker's crit into r3.
-add     r3,r6       @Add r6 to the attacker's crit.
-strh    r3,[r4]     @Store attacker crit.
+VengefulSkill:    @add missing unit hp to hit and crit
+
+ldr     r0,=0x203A4EC @Move attacker data into r0.
+ldrb    r1,[r0,#0x12] @attacker max hp
+ldrb    r2,[r0,#0x13] @attacker current hp
+sub     r1,r2         @remaining hp
+@ldrh    r2,[r4,r2]
+@add     r2,r0,r2
+@strh    r2,[r4,r2]
+mov     r3,r0         @store remainig hp value
+
+add     r0,#0x60    @Move to the attacker's hit.
+ldrh    r4,[r0]     @Load the attacker's hit into r4.
+add     r4,r3       @Add r3 (missing hp) to the attacker's hit.
+strh    r4,[r0]     @Store attacker hit.
+
+add     r0,#0x6     @Move to the attacker's crit.
+ldrh    r4,[r0]     @Load the attacker's crit into r4.
+add     r4,r3       @Add r3 (missing hp) to the attacker's crit.
+strh    r4,[r0]     @Store attacker crit.
+
 b       SkillReturn
 
 ChannelingSkill:
