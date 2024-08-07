@@ -3,7 +3,9 @@ ALIGN 4
 
 EphraimLordSkillList:
 BYTE 1 EvasiveManeuverID
-BYTE 2 LuckySevenID
+BYTE 2 VengefulBlowID
+BYTE 3 PragmaticID
+BYTE 4 ChivalryID
 BYTE 00 00
 ALIGN 4
 
@@ -29,6 +31,7 @@ BYTE 00 00
 ALIGN 4
 
 KnightSkillList:
+BYTE 1 AetherID
 BYTE 00 00
 ALIGN 4
 
@@ -93,6 +96,7 @@ BYTE 00 00
 ALIGN 4
 
 SageSkillList:
+BYTE 1 ChannelingID
 BYTE 00 00
 ALIGN 4
 
