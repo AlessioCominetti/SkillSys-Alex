@@ -821,7 +821,7 @@
 
 //Dragonskin: Halve damage taken
 //By Jopettajah
-#define DragonSkinID 255
+#define DragonSkinID 45
 #define DragonskinID DragonSkinID //Alias
 
 //Stunning Smile: If foe is male, inflicts Avo-20 on that foe during combat.
@@ -1456,11 +1456,15 @@
 //By FrecciaVerde
 #define ManaSapperID 51
 
+//PowerHungry: if user str is lower than foe, add foe's STR/2 to damage
+//By FrecciaVerde
+#define PowerHungryID 115
+
 
 //Display-Only Skills
 
 #define CunningID 255
-#define NiceThighsID 115
+#define NiceThighsID 255
 #define PersonalityID 116
 
 
