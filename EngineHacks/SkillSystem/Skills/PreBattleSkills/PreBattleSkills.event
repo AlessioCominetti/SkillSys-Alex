@@ -506,6 +506,11 @@ Awakened:
 POIN SkillTester
 WORD AwakenedID
 
+ALIGN 4
+PowerHungry:
+#incbin "PowerHungry/PowerHungry.dmp"
+POIN SkillTester
+WORD PowerHungryID
 
 #include "KeenFighter/Installer.event" 
 #include "FlankSwarmScale/Installer.event" 
