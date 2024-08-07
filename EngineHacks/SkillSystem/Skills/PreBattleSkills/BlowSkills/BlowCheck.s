@@ -20,7 +20,7 @@ cmp r0, #0          @Check if unit has the corresponding Faire skill.
 bne SkillChecks
 SkillReturn:
 add     r4, #0x01
-cmp     r4, #0x0A
+cmp     r4, #0x0D
 bne     CheckLoop
 b       EndProgram
 SkillChecks:
@@ -42,8 +42,8 @@ cmp     r4, #0x07
 beq     ChivalrySkill
 cmp     r4, #0x08
 beq     PragmaticSkill
-cmp	r4, #0x09
-beq	HeroesDeathSkill
+cmp	    r4, #0x09
+beq	    HeroesDeathSkill
 cmp     r4, #0x0A
 beq     VengefulSkill
 cmp     r4, #0x0B
@@ -190,25 +190,21 @@ add     r3,r2    @Skl to damage
 strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn
 
-VengefulSkill:    @add missing unit hp to hit and crit
-
+@add missing unit hp to hit and crit
+VengefulSkill:    
 ldr     r0,=0x203A4EC @Move attacker data into r0.
 ldrb    r1,[r0,#0x12] @attacker max hp
 ldrb    r2,[r0,#0x13] @attacker current hp
 sub     r1,r2         @remaining hp
-@ldrh    r2,[r4,r2]
-@add     r2,r0,r2
-@strh    r2,[r4,r2]
-mov     r3,r0         @store remainig hp value
 
 add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r2,[r0]     @Load the attacker's hit into r4.
-add     r2,r3       @Add r3 (missing hp) to the attacker's hit.
+add     r2,r1       @Add r1 (missing hp) to the attacker's hit.
 strh    r2,[r0]     @Store attacker hit.
 
 add     r0,#0x6     @Move to the attacker's crit.
 ldrh    r2,[r0]     @Load the attacker's crit into r4.
-add     r2,r3       @Add r3 (missing hp) to the attacker's crit.
+add     r2,r1       @Add r1 (missing hp) to the attacker's crit.
 strh    r2,[r0]     @Store attacker crit.
 
 b       SkillReturn
@@ -217,12 +213,15 @@ ChannelingSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r2,r0,#0x02        @move here charater status
 cmp     r2,#0x0C     @check if unit didn't move
-beq Skillreturn
+beq     Trampoline  @we've reached the god damn limit of beq so we need an intermediary branch
 add     r0,#0x66    @Move to the attacker's crit.
 ldrh    r3,[r0]     @Load the attacker's crit into r3.
 add     r3,#0x64    @Add 100 to the attacker's crit.
 strh    r3,[r0]     @Store attacker crit.
 b       SkillReturn
+
+Trampoline:
+b SkillReturn
 
 .align
 .ltorg
