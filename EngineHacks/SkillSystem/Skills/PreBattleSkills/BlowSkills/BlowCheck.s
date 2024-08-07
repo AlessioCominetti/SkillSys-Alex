@@ -202,21 +202,21 @@ sub     r1,r2         @remaining hp
 mov     r3,r0         @store remainig hp value
 
 add     r0,#0x60    @Move to the attacker's hit.
-ldrh    r4,[r0]     @Load the attacker's hit into r4.
-add     r4,r3       @Add r3 (missing hp) to the attacker's hit.
-strh    r4,[r0]     @Store attacker hit.
+ldrh    r2,[r0]     @Load the attacker's hit into r4.
+add     r2,r3       @Add r3 (missing hp) to the attacker's hit.
+strh    r2,[r0]     @Store attacker hit.
 
 add     r0,#0x6     @Move to the attacker's crit.
-ldrh    r4,[r0]     @Load the attacker's crit into r4.
-add     r4,r3       @Add r3 (missing hp) to the attacker's crit.
-strh    r4,[r0]     @Store attacker crit.
+ldrh    r2,[r0]     @Load the attacker's crit into r4.
+add     r2,r3       @Add r3 (missing hp) to the attacker's crit.
+strh    r2,[r0]     @Store attacker crit.
 
 b       SkillReturn
 
 ChannelingSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
-add     r5,r0,#0x02        @move here charater status
-cmp     r5,#0x0C     @check if unit didn't move
+add     r2,r0,#0x02        @move here charater status
+cmp     r2,#0x0C     @check if unit didn't move
 beq Skillreturn
 add     r0,#0x66    @Move to the attacker's crit.
 ldrh    r3,[r0]     @Load the attacker's crit into r3.
