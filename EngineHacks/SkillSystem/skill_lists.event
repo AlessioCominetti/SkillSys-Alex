@@ -2,10 +2,9 @@
 ALIGN 4 
 
 EphraimLordSkillList:
-BYTE 1 EvasiveManeuverID
-BYTE 2 VengefulBlowID
-BYTE 3 PragmaticID
-BYTE 4 ChivalryID
+BYTE 1 DextrousBlowID
+BYTE 2 PragmaticID
+BYTE 3 ChivalryID
 BYTE 00 00
 ALIGN 4
 
