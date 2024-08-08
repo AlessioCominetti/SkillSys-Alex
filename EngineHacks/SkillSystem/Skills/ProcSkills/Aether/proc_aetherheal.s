@@ -50,6 +50,7 @@ mov	lr,r3
 .short	0xF800
 mov	  r1, #4
 ldsh	r1, [r7, r1]    @ damage
+lsr  r1,r1,#2        @divide heal by 4
 ldrb  r2, [r5, #0x13] @ defender's curr hp
 cmp   r1, r2
 ble   defLives        @ Damage taken / HP healed by attacker.
