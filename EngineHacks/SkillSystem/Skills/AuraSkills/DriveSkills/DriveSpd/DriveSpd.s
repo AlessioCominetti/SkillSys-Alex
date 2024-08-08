@@ -20,39 +20,16 @@ mov lr, r0
 mov r0, r4 @attacker
 ldr r1, DriveSpdID
 mov r2, #0 @can_trade
-mov r3, #5 @range
+mov r3, #2 @range
 .short 0xf800
 cmp r0, #0
 beq Done
 
-@ Calculate distance and bonus
-@r0=x1
-@r1=y1
-@r2=x2
-@r3=y2
-sub   r0, r2 @ X difference 
-sub   r1, r3 @ Y difference 
-
-@ Take coordinates'
-@ absolute values.                
-asr r3, r0, #31
-add r0, r0, r3
-eor r0, r3
-
-asr r3, r1, #31
-add r1, r1, r3
-eor r1, r3
-
-add r0, r1 @ distance in r0 
-cmp r0, #6 @ if distance is 6 or more...
-ble Done   @... skip
-
-@testing
-add r4, #0x5E @attacker attack speed
-ldrh r3, [r4]
-add r3, r3, #6  @calculate using  6-distance, if distance is 1, bonus is maxxed at 5
-sub r3, r3, r0
-strh r3, [r4]
+mov r0, r4
+add     r0,#0x5E    @Move to the attacker's AS.
+ldrh    r3,[r0]     @Load the attacker's AS into r3.
+add     r3,#4    @add 4 to the attacker's AS.
+strh    r3,[r0]     @Store attacker AS.
 
 Done:
 pop {r4-r7}
