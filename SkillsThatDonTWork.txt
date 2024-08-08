@@ -1,4 +1,4 @@
-RapidDeployment-  for the first three turns, +2 move                            (modified lucky seven) 
+RapidDeployment-  for the first three turns, +2 move                            (modified lucky seven)    XXX
 
 Water shield- allies in five tiles get +1 resistence, bonus increases for each tile closer (modified drive res)
 
@@ -10,28 +10,19 @@ Ice shield- allies in five tiles get +1 magic, bonus increases for each tile clo
 
 Thunder shield- allies in five tiles get +1 speed, bonus increases for each tile closer (modified drive spd)
 
-Wind shield- allies in five tiles get +3 hit/crit, bonus increases for each tile closer (modified drive spd, new ID)
+Wind shield- allies in five tiles get +3 hit/avoid, bonus increases for each tile closer (modified charisma)
 
 Envy-   if foe hp is max, double attack                                (modified chivalry)
 
 Pride-  if foe hp is not max, double attack                                (modified pragmatic)
 
-
-
-
-
-These skills are modified ID and have their folder in ToFix or are added to the BlowCheck.S file
-
-Evasive Maneuver-  +1 MOV for each 25% hp lost                                   (modified silent pride, need new ID)
-
-VengefulBlow-    add current missing hp to hit/crit when initiaing combat     (added new blow skill, new ID)
+Evasive Maneuver-  +2 MOV if hp<50%                                   (modified wrath, need new ID)   XXX
 
 Dextrous-     when initiating combat, add SKL/4 to damage                         (added new blow skill, new ID)
 
 Channeling-   if initiatin combat while not moving, always crit               (added new blow skill, new ID) 
 
-ManaSapper-     when facing magical foes, add foe's MAG/4 to unit attack speed (modified mage killer, new ID)
-
+ManaSapper-     when facing magical foes, add foe's MAG/4 to unit attack speed (modified mage killer, new ID)  XXX
 
 ICONE
 Awakened
@@ -40,4 +31,3 @@ VengefulBlow
 Dextrous
 Channeling
 ManaSapper
-Wind Shield
