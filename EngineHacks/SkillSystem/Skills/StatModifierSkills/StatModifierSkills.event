@@ -35,6 +35,12 @@ ALIGN 4
 SpeedBoostID_Link:
 WORD SpeedBoostID
 
+#include "EvasiveManeuver/EvasiveManeuver.lyn.event" 
+ALIGN 4
+EvasiveManeuverID_Link:
+WORD EvasiveManeuverID
+
+
 PlusAura:
 #incbin "Plus/Plus.dmp" 
 POIN AuraSkillCheck
