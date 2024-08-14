@@ -1456,7 +1456,7 @@
 //By FrecciaVerde
 #define ManaSapperID 51
 
-//PowerHungry: if user str is lower than foe, add foe's STR/2 to damage
+//PowerHungry: if user str is lower than foe, add foe's STR/4 to damage
 //By FrecciaVerde
 #define PowerHungryID 115
 
