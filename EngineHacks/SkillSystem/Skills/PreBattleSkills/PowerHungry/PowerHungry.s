@@ -25,12 +25,12 @@ ldrb r1, [r5, #0x14] @defender str
 cmp r0, r1
 bge End @skip if str is greater or equal
 
-@add half of foe str to damage
+@add a quarter of foe str to damage
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk user
 mov r2, #0x5a
 ldrh r3, [r5, r2] @atk foe
-lsr r3,#1   @halves foe str
+lsr r3,#2   @foe's STR/4
 add r0, r3
 strh r0, [r4,r1]
 
