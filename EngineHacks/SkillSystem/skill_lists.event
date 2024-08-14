@@ -9,6 +9,7 @@ BYTE 00 00
 ALIGN 4
 
 EirikaLordSkillList:
+BYTE 1 PowerHungryID
 BYTE 00 00
 ALIGN 4
 
