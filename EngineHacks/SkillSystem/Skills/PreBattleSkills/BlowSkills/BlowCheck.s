@@ -181,12 +181,12 @@ b       SkillReturn	@Attacker's attack. Redundancy? Nah.
 
 DextrousSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
-mov     r2,r0       @save a copy in r2
-add     r0,#0x5A    @Move to the attacker's attack.
+mov     r1,#0x5A    @Move to the attacker's attack.
 ldrh    r3,[r0]     @Load the attacker's attack into r3.
-add     r2,#0x15   @load attacker skill
-lsr     r2,#2      @divide skill by 4
-add     r3,r2    @Skl to damage
+ldrh    r2, [r1,r0]  @load the short at r0 +r1 offset
+add     r1,#0x15   @load attacker skill
+lsr     r1,#2      @divide skill by 4
+add     r3,r1    @Skl to damage
 strh    r3,[r0]     @Store attacker attack.
 b       SkillReturn
 
